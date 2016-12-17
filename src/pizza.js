@@ -3,6 +3,7 @@
 
 function onClickIngredient(buttonClass, ingredientClass) {
   $(buttonClass).on('click', function() {
+    $(this).toggleClass('active');
     $(ingredientClass).fadeToggle();
   });
 }
@@ -13,9 +14,11 @@ onClickIngredient('.btn-green-peppers', '.green-pepper');
 
 
 $('.btn-sauce').on('click', function() {
+  $(this).toggleClass('active');
   $('.sauce').toggleClass('sauce-white');
 });
 
 $('.btn-crust').on('click', function() {
+  $(this).toggleClass('active');
   $('.crust').toggleClass('crust-gluten-free');
 });
